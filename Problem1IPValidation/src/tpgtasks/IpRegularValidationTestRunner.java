@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class IpRegularValidation {
+public class IpRegularValidationTestRunner {
 
 	private static Pattern pattern;
     private static Matcher matcher;
@@ -14,14 +14,14 @@ public class IpRegularValidation {
 		"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}" +
 		"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
 
-    public IpRegularValidation(){
+    public IpRegularValidationTestRunner(){
 	  pattern = Pattern.compile(IP_REGUAL);
     }
 
    /**
-    * Validate ip address with regular expression
-    * @param ip ip address for validation
-    * @return true valid ip address, false invalid ip address
+    * Validate ip_address with regular expression
+    * @param ip_address for validation
+    * @return true valid, false invalid 
     */
     public boolean validate(final String ip_address){
 	  matcher = pattern.matcher(ip_address.trim());
@@ -33,7 +33,7 @@ public class IpRegularValidation {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;	
-			IpRegularValidation validator = new IpRegularValidation();
+			IpRegularValidationTestRunner validator = new IpRegularValidationTestRunner();
 		
 			while ((line = bufferedReader.readLine()) != null) {
 				if (!validator.validate(line))
