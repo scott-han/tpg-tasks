@@ -29,12 +29,14 @@ public class IpRegularValidationTestRunner {
     }
 	public static void main(String[] args) {
 		try {
+			//read from file for some test input ip addressed
 			File file = new File("src/ip_validator_test.txt");
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;	
 			IpRegularValidationTestRunner validator = new IpRegularValidationTestRunner();
 		
+			//loop throug each input ip address and verify
 			while ((line = bufferedReader.readLine()) != null) {
 				if (!validator.validate(line))
 				System.out.println(line + " is not a valid ip address\n");
