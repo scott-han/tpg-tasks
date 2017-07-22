@@ -1,4 +1,4 @@
-package JavaTpgTasks;
+package tpgtasks;
 
 import java.util.ArrayList;
 import java.util.Collections;
