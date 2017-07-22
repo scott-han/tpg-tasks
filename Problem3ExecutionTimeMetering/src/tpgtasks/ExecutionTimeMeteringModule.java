@@ -1,5 +1,8 @@
 package tpgtasks;
-
+/**
+ * ExecutionTimeMeteringModule has configure method which bind the ExecutionTimeMeteringInterceptor
+ * with annotation @ExecutionTimeMetering
+ */
 import com.google.inject.AbstractModule;
 import com.google.inject.matcher.Matchers;
 
