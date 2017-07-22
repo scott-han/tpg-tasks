@@ -32,7 +32,7 @@ class StudentComparor implements Comparator<Student> {
 		}
     }
 }
-public class StudentsSorting {
+public class StudentsSortingTestRunner {
 
 	
 	public static void main(String[] args) {
